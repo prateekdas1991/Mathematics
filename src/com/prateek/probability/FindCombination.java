@@ -2,13 +2,15 @@ package com.prateek.probability;
 
 import com.prateek.plainArithmatic.FindFactorial;
 
-public class FindPermutation {
+public class FindCombination {
 
     public static void main(String[] args) {
-        System.out.println(new FindPermutation().findPermutation(4,2));
+        System.out.println(new FindCombination().findCombination(66,53));
     }
-    public double findPermutation(int n,int r){
+    public double findCombination(int n, int r){
         FindFactorial fact=new FindFactorial();
-        return (fact.findFactorial(n)/(fact.findFactorial(r)*fact.findFactorial(n-r)));
+        double facA=fact.findFactorial(n);
+        double facB=fact.findFactorial(n-r);
+        return (facA/facB);
     }
 }
